@@ -1,0 +1,2 @@
+# Capstone-infrastructure-platform
+Design, consolidation, and extension of an automated IT infrastructure platform for a small organization. Builds on 9 prior standalone lab projects (networking, Docker, reverse proxy, DNS, monitoring, CI/CD, Ansible, security hardening, centralized logging) by auditing, hardening, and extending them with FreeIPA identity management and three internal services (Wiki.js, Snipe-IT, Uptime Kuma).
