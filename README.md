@@ -14,15 +14,15 @@ This platform builds on nine sequential lab projects, each in its own repository
 
 | # | Project | Repo |
 |---|---|---|
-| 1 | Linux networking lab (static IPs, SSH keys, UFW) | `linux-networking-lab` |
-| 2 | Dockerized web infrastructure | `dockerized-web-infrastructure` |
-| 3 | Nginx reverse proxy | `nginx-reverse-proxy` |
-| 4 | Custom DNS server (BIND9) | `custom-dns-server` |
-| 5 | Monitoring stack (Prometheus, Grafana, cAdvisor, node_exporter) | `monitoring-stack` |
-| 6 | GitHub Actions CI/CD with self-hosted runner | `monitoring-stack` |
-| 7 | Ansible automation | `ansible-lab` |
-| 8 | Docker + UFW hardening (`DOCKER-USER` chain) | `ansible-lab` |
-| 9 | Loki + Promtail centralized logging | `monitoring-stack` |
+| 1 | Linux networking lab (static IPs, SSH keys, UFW) | [`linux-networking-lab`](https://github.com/Landry5545/linux-networking-lab) |
+| 2 | Dockerized web infrastructure | [`dockerized-web-infrastructure`](https://github.com/Landry5545/dockerized-web-infrastructure) |
+| 3 | Nginx reverse proxy | [`nginx-reverse-proxy`](https://github.com/Landry5545/nginx-reverse-proxy) |
+| 4 | Custom DNS server (BIND9) | [`custom-dns-server`](https://github.com/Landry5545/custom-dns-server) |
+| 5 | Monitoring stack (Prometheus, Grafana, cAdvisor, node_exporter) | [`monitoring-stack`](https://github.com/Landry5545/monitoring-stack) |
+| 6 | GitHub Actions CI/CD with self-hosted runner | [`monitoring-stack`](https://github.com/Landry5545/monitoring-stack) |
+| 7 | Ansible automation | [`ansible-lab`](https://github.com/Landry5545/ansible-lab) |
+| 8 | Docker + UFW hardening (`DOCKER-USER` chain) | [`ansible-lab`](https://github.com/Landry5545/ansible-lab) |
+| 9 | Loki + Promtail centralized logging | [`monitoring-stack`](https://github.com/Landry5545/monitoring-stack) |
 
 All nine were re-verified from a fresh state as part of this capstone's Day 1 audit — see [`audit/day1-findings.md`](./audit/day1-findings.md).
 
