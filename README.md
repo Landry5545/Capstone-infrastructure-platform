@@ -32,6 +32,7 @@ All nine were re-verified from a fresh state as part of this capstone's Day 1 au
 |---|---|---|
 | `server-vm` | Reverse proxy, DNS, monitoring, CI/CD runner | 10.10.10.10 |
 | `client-vm` | Node exporter, log shipping, test workloads | 10.10.10.20 |
+| `freeipa-vm` | Identity management (FreeIPA) | 10.10.10.30 |
 | Internal network | `labnet` | — |
 
 ## New Additions (Capstone Scope)
@@ -53,7 +54,7 @@ All three services will be deployed behind the existing Nginx reverse proxy, res
 | Reverse proxy | Nginx |
 | Metrics | Prometheus, Grafana, node_exporter, cAdvisor |
 | Logging | Loki, Promtail |
-| Identity | FreeIPA |
+| Identity | FreeIPA (AlmaLinux 9.8) |
 | Automation | Ansible |
 | CI/CD | GitHub Actions |
 
@@ -78,7 +79,7 @@ capstone-infrastructure-platform/
 
 🟢 Day 1 — Infrastructure audit complete
 ⬜ Day 2-3 — Hardening
-⬜ Day 4-6 — FreeIPA identity management
+🟢 Day 4-6 — FreeIPA identity management complete — see [`audit/freeipa-installation-saga.md`](./audit/freeipa-installation-saga.md)
 ⬜ Day 7-9 — Service deployment
 ⬜ Day 10 — Unified monitoring/logging
 ⬜ Day 11 — Ansible consolidation
