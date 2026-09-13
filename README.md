@@ -35,6 +35,12 @@ All nine were re-verified from a fresh state as part of this capstone's Day 1 au
 | `freeipa-vm` | Identity management (FreeIPA) | 10.10.10.30 |
 | Internal network | `labnet` | — |
 
+## Architecture
+
+![Platform topology](./docs/capstone_platform_topology.png)
+![server-vm internals](./docs/server_vm_internal_architecture.png)
+![Network topology](./docs/capstone_network_topology.png)
+
 ## New Additions (Capstone Scope)
 
 - **FreeIPA** — centralized identity management
@@ -78,13 +84,13 @@ capstone-infrastructure-platform/
 ## Status
 
 🟢 Day 1 — Infrastructure audit complete
-⬜ Day 2-3 — Hardening
+🟢 Day 2-3 — Hardening complete (folded into Day 1: secrets moved to `.env`, resource allocation fixed)
 🟢 Day 4-6 — FreeIPA identity management complete — see [`audit/freeipa-installation-saga.md`](./audit/freeipa-installation-saga.md)
-⬜ Day 7-9 — Service deployment
-⬜ Day 10 — Unified monitoring/logging
-⬜ Day 11 — Ansible consolidation
-⬜ Day 12 — CI/CD extension
-⬜ Day 13-14 — Unified architecture documentation
+🟢 Day 7-9 — Service deployment complete — see [`audit/service-deployment-saga.md`](./audit/service-deployment-saga.md)
+🟢 Day 10 — Unified monitoring/logging complete — see [`audit/day10-incident-memory-pressure.md`](./audit/day10-incident-memory-pressure.md)
+🟢 Day 11 — Ansible consolidation complete — see [`audit/day11-incident-disk-corruption-recovery.md`](./audit/day11-incident-disk-corruption-recovery.md)
+🟢 Day 12 — CI/CD extension complete — see [`audit/day12-incident-disk-corruption-and-cicd-recovery.md`](./audit/day12-incident-disk-corruption-and-cicd-recovery.md)
+🟢 Day 13-14 — Architecture documentation complete — see [`docs/`](./docs/)
 ⬜ Day 15-16 — Report and presentation
 
 ## License
