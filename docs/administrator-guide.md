@@ -105,9 +105,24 @@ ansible-playbook -i inventory.ini capstone-services.yml           # then real
 | VM-level safety net | VirtualBox snapshot, taken before any disk resize or risky operation | Before any disk-level change — see troubleshooting guide, this was the single most important safeguard during development |
 
 **Restoring a database:**
+
+Restoring directly into a live, already-populated database silently fails — `psql`/`mysql` will throw "already exists" errors on the schema statements and leave current data untouched, even though the command appears to complete. The target database must be dropped and recreated first:
+
 ```bash
-docker exec -i <container> psql -U <user> -d <db> < backup.sql        # Postgres (Wiki.js)
-docker exec -i <container> mysql -u <user> -p<pass> <db> < backup.sql # MariaDB (Snipe-IT)
+# Postgres (Wiki.js) — stop the app, recreate the DB, then restore
+docker stop wikijs
+docker exec wikijs-db psql -U wikijs -d postgres -c "DROP DATABASE wikijs;"
+docker exec wikijs-db psql -U wikijs -d postgres -c "CREATE DATABASE wikijs OWNER wikijs;"
+docker exec -i wikijs-db psql -U wikijs -d wikijs < backup.sql
+docker start wikijs
+```
+
+```bash
+# MariaDB (Snipe-IT) — same principle; not yet drilled, apply the same pattern
+docker stop snipeit
+docker exec snipeit-db mysql -u <user> -p<pass> -e "DROP DATABASE <db>; CREATE DATABASE <db>;"
+docker exec -i snipeit-db mysql -u <user> -p<pass> <db> < backup.sql
+docker start snipeit
 ```
 
 **Restoring from a VirtualBox snapshot (host side):**
@@ -116,7 +131,7 @@ VBoxManage snapshot <vm-name> restore <snapshot-name>
 ```
 Confirm the VM's state is `poweroff` first (`VBoxManage showvminfo <vm> --machinereadable | Select-String VMState`), or the restore will fail.
 
-> **Note:** backup and restore procedures above are documented and ready to use, but have not yet been exercised as a full drill (restoring a database from a cold backup, or restoring a VM from a snapshot taken specifically for this purpose). Running that drill once, end to end, is recommended before relying on this platform for anything beyond lab/portfolio use.
+> **Note:** the database restore procedure above was drilled end-to-end on 2026-10-16 and corrected based on what that drill found — see [`audit/day13-backup-restore-validation.md`](../audit/day13-backup-restore-validation.md). The VirtualBox snapshot restore procedure is still documented but unexercised; running that drill once is recommended before relying on it in a real incident.
 
 ## Verifying Survival of a Reboot
 
