@@ -90,8 +90,9 @@ capstone-infrastructure-platform/
 🟢 Day 10 — Unified monitoring/logging complete — see [`audit/day10-incident-memory-pressure.md`](./audit/day10-incident-memory-pressure.md)
 🟢 Day 11 — Ansible consolidation complete — see [`audit/day11-incident-disk-corruption-recovery.md`](./audit/day11-incident-disk-corruption-recovery.md)
 🟢 Day 12 — CI/CD extension complete — see [`audit/day12-incident-disk-corruption-and-cicd-recovery.md`](./audit/day12-incident-disk-corruption-and-cicd-recovery.md)
+🟢 Backup/restore validation — Wiki.js PostgreSQL drill complete — see [`audit/day13-backup-restore-validation.md`](./audit/day13-backup-restore-validation.md)
 🟢 Day 13-14 — Architecture documentation complete — see [`docs/`](./docs/)
-⬜ Day 15-16 — Report and presentation
+🟡 Day 15-16 — Report and presentation drafted, final review in progress
 
 ## License
 
