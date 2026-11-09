@@ -83,16 +83,19 @@ capstone-infrastructure-platform/
 
 ## Status
 
-🟢 Day 1 — Infrastructure audit complete
-🟢 Day 2-3 — Hardening complete (folded into Day 1: secrets moved to `.env`, resource allocation fixed)
-🟢 Day 4-6 — FreeIPA identity management complete — see [`audit/freeipa-installation-saga.md`](./audit/freeipa-installation-saga.md)
-🟢 Day 7-9 — Service deployment complete — see [`audit/service-deployment-saga.md`](./audit/service-deployment-saga.md)
-🟢 Day 10 — Unified monitoring/logging complete — see [`audit/day10-incident-memory-pressure.md`](./audit/day10-incident-memory-pressure.md)
-🟢 Day 11 — Ansible consolidation complete — see [`audit/day11-incident-disk-corruption-recovery.md`](./audit/day11-incident-disk-corruption-recovery.md)
-🟢 Day 12 — CI/CD extension complete — see [`audit/day12-incident-disk-corruption-and-cicd-recovery.md`](./audit/day12-incident-disk-corruption-and-cicd-recovery.md)
-🟢 Backup/restore validation — Wiki.js PostgreSQL drill complete — see [`audit/day13-backup-restore-validation.md`](./audit/day13-backup-restore-validation.md)
-🟢 Day 13-14 — Architecture documentation complete — see [`docs/`](./docs/)
-🟡 Day 15-16 — Report and presentation drafted, final review in progress
+| Phase | Status | Delivered | Evidence |
+|---|---|---|---|
+| Day 1 | 🟢 | Infrastructure audit; secrets moved to `.env`; resource allocation fixed (Days 2-3 hardening folded in) | [`audit/day1-findings.md`](./audit/day1-findings.md) |
+| Days 4-6 | 🟢 | FreeIPA identity management (realm `LAB.LOCAL`) | [`audit/freeipa-installation-saga.md`](./audit/freeipa-installation-saga.md) |
+| Days 7-9 | 🟢 | Service deployment: Wiki.js, Snipe-IT, Uptime Kuma | [`audit/service-deployment-saga.md`](./audit/service-deployment-saga.md) |
+| Day 10 | 🟢 | Unified monitoring and logging (Prometheus, Grafana, Loki) | [`audit/day10-monitoring-integration.md`](./audit/day10-monitoring-integration.md), [`audit/day10-incident-memory-pressure.md`](./audit/day10-incident-memory-pressure.md) |
+| Day 11 | 🟢 | Ansible consolidation | [`audit/day11-incident-disk-corruption-recovery.md`](./audit/day11-incident-disk-corruption-recovery.md) |
+| Day 12 | 🟢 | CI/CD extension (self-hosted GitHub Actions runner) | [`audit/day12-incident-disk-corruption-and-cicd-recovery.md`](./audit/day12-incident-disk-corruption-and-cicd-recovery.md) |
+| Day 13 | 🟢 | Backup/restore validation: Wiki.js PostgreSQL drill | [`audit/day13-backup-restore-validation.md`](./audit/day13-backup-restore-validation.md) |
+| Days 13-14 | 🟢 | Architecture documentation | [`docs/`](./docs/) |
+| Days 15-16 | 🟡 | Final report and presentation drafted, final review in progress | [`docs/capstone-report.pdf`](./docs/capstone-report.pdf), [`docs/capstone-presentation.pdf`](./docs/capstone-presentation.pdf) |
+
+**Not yet drilled:** Snipe-IT MariaDB restore and VirtualBox snapshot restore.
 
 ## License
 
